@@ -126,7 +126,7 @@ def job():
 
 
 # 매 시간 정각에 job 함수 실행
-schedule.every().minute.at(":20").do(job)
+schedule.every(1).hours.do(job)
 
 while True:
     schedule.run_pending()
